@@ -1,9 +1,7 @@
-Chapters downloaded manually with Firefox reader mode.
+Download chapters and notes with:
 
-Download notes from https://joyce-staging.net/:
+    make download
 
-    make download_notes
+Build epub with:
 
-Build epub:
-
-    make all
+    make epub
