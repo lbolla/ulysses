@@ -83,7 +83,7 @@ def download_note(id, title, **kwargs):
     print("Downloading note", id, title)
     with urllib.request.urlopen(os.path.join(notesapiurl, id)) as f:
         chapter = json.loads(f.read().decode())
-        html = chapter["html_source"]
+        html = f"<h2>{title}</h2>{chapter["html_source"]}"
         write(id, title, html)
 
 def download_notes():
