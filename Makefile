@@ -7,7 +7,12 @@ download:
 	python download.py
 
 epub:
-	ebook-convert ulysses/index.html ulysses.epub --cover cover-monochrome.jpg --authors Joyce --title Ulysses
+	ebook-convert ulysses/index.html ulysses.epub \
+	--cover cover-monochrome.jpg \
+	--title Ulysses \
+	--authors "James Joyce" \
+	--book-producer "lbolla" \
+	--comment "Ulysses by James Joyce, annotated by John Hunt, converted to EPUB by lbolla"
 
 view:
 	ebook-viewer ulysses.epub
@@ -23,4 +28,9 @@ staging_img:
 	cp -R --update=none notes/episode_* cleaned/notes
 
 staging_epub:
-	ebook-convert cleaned/index.html staging-ulysses.epub --cover cover-monochrome.jpg --authors Joyce --title Ulysses
+	ebook-convert cleaned/index.html staging-ulysses.epub \
+	--cover cover-monochrome.jpg \
+	--title Ulysses \
+	--authors "James Joyce" \
+	--book-producer "lbolla" \
+	--comment "Ulysses by James Joyce, annotated by John Hunt, converted to EPUB by lbolla"
