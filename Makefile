@@ -1,13 +1,10 @@
-all: clean download epub
-
-clean:
-	rm -rf cleaned ulysses
+all: download epub
 
 download:
 	python download.py
 
 epub:
-	ebook-convert ulysses/index.html ulysses.epub \
+	ebook-convert chapters/index.html ulysses.epub \
 	--cover cover-monochrome.jpg \
 	--title Ulysses \
 	--authors "James Joyce" \
